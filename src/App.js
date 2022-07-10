@@ -1,25 +1,47 @@
-import logo from './logo.svg';
-import './App.css';
-
-function App() {
+import React from "react";
+import "../node_modules/bootstrap/dist/css/bootstrap.min.css"
+const App = () =>
+{
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <React.Fragment>
+      <h1 className="text-center text-danger text-capitalize my-5">Lets start visualizing algorithms</h1>
+      <div className="container">
+  <div className="row">
+    <div className="col-sm">
+    <div class="card" >
+  <img class="card-img-top" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ6knmTzZ24sgdepjcuQTKZj5CMWLUaJgK2P_G-DH_vsm7djeIS5_vjLRyzHjAH1ishiJ0&usqp=CAU" alt="Card image cap" />
+  <div class="card-body">
+    <h5 class="card-title">Sorting Algo visualizer</h5>
+    <p class="card-text">A web app for visualizing sorting algorithms live..</p>
+    <a href="https://kartik-sortalgo.herokuapp.com/" class="btn btn-primary">Go somewhere</a>
+  </div>
+</div>
     </div>
-  );
+    <div className="col-sm">
+    <div class="card" >
+  <img  height="200px" class="card-img-top" src="data:image/png;base64,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" alt="Card image cap" />
+  <div class="card-body">
+    <h5 class="card-title">Shortest Path</h5>
+    <p class="card-text">A web app for finding shortest path and visualizing it live.</p>
+    <a href="https://pathfinder-kartik.herokuapp.com/" class="btn btn-primary">Lets Goo</a>
+  </div>
+</div>
+    </div>
+  </div>
+      </div>
+      <div>
+      <footer class="bg-light text-center text-lg-start">
+
+  <div className="text-center p-3" >
+    © 2020 Copyright:
+    <a className="text-dark" href="https://github.com/kartik298"> Kartik</a>
+  </div>
+
+</footer>
+      </div>
+    </React.Fragment>
+
+  )
 }
 
 export default App;
